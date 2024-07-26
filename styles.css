@@ -1,0 +1,651 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body{
+    background-color: rgb(244, 244, 244);
+    /* overflow: hidden; */
+    font-family: 'Manrope';
+}
+
+.logo{
+    margin: 0 0 30px 28px;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+.logo img{
+    width: 8rem;
+}
+
+.logo .close{
+    font-size: 20px;
+    display: none;
+}
+
+.sidebar-menu{
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow: hidden;
+    transition: 0.5s;
+    padding-top: 30px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.sidebar-list a{
+    padding: 15px 8px 15px 40px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+    display: block;
+    transition: all .5s;
+    cursor: pointer;
+    width: 90%;
+}
+
+.sidebar-list a.active{
+    background: #f4f4f3;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 90%;
+    cursor: pointer;
+}
+
+.sidebar-list a div{
+    position: relative;
+    bottom: 13px;
+    right: -5px;
+    background: #265193;
+    height: 50px;
+    width: 10px;
+    float: right;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.sidebar-menu a:hover{
+    background-color: #f4f4f3;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 90%;
+}
+
+#main{
+    transition: margin-left .5s;
+    padding: 0 0 16px 0;
+    margin-left: 250px;
+}
+
+.head{
+    padding: 20px;
+    display: flex;
+}
+
+.head .nav{
+    font-family: 'Red Hat Display';
+    font-size: 24px;
+    font-weight: 700;
+    color: #265193;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.head .nav span{
+    font-weight: 600;
+    font-family: 'Red Hat Display';
+    font-size: 14px;
+    color: #404040;
+}
+
+.theme-switch{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    margin-right: 20px;
+    margin-top: 15px;
+    height: 20px;
+}
+
+.theme-switch .text{
+    font-size: 12px;
+    color: #009494;
+    font-family: 'Red Hat Display';
+    font-weight: 800;
+    margin-left: 10px;
+}
+
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+}
+
+.switch input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider::before{
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider{
+    background-color: #009494;
+}
+
+input:checked+.slider:before{
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+}
+
+.col-div-6 .nav{
+    line-height: 1;
+    width: 100%;
+    margin-right: 400px;
+}
+
+.clearfix i{
+    font-size: 20px;
+    margin: 15px 5px 0 0;
+}
+
+.col-div-3{
+    width: 50%;
+    float: left;
+    margin-left: 10px;
+}
+
+.profile{
+    width: 213px;
+    display: flex;
+    float: right;
+    background: #fff;
+    padding: 5px 10px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.profile p{
+    font-weight: 700;
+    margin-left: 12px;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #1c1c1c;
+}
+
+.profile i{
+    margin-top: 12px;
+    font-size: 14px;
+    margin-left: 9px;
+}
+
+.pro-img{
+    float: left;
+    width: 34px;
+    height: 34px;
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 5px;
+    background: #ceeffd;
+    border-radius: 20px;
+    padding-top: 3px;
+    text-align: center;
+    color: #066A96;
+}
+
+.profile p span{
+    font-weight: 400;
+    font-size: 8px;
+    display: block;
+    color: #393939;
+}
+
+.col-div-6 img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+.col-div-3{
+    width: 25%;
+    float: left;
+}
+
+.bal{
+    font-size: 16px;
+    font-weight: 600;
+    color: #265193;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.bal span{
+    margin-left: 20px;
+    color: #959595;
+}
+
+.col-div-6 .bal{
+    width: 100%;
+    margin-right: 400px;
+}
+
+.btn{
+    width: 138px;
+    height: 30px;
+    margin-left: 20px;
+    background: #265193;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+}
+
+button{
+    cursor: pointer;
+}
+
+.container{
+    display: flex;
+    margin-left: 270px;
+}
+
+.container .box1, .box2{
+    width: 500;
+    height: 224px;
+    background: #fff;
+    border-radius: 8px;
+    margin-top: 30px;
+    flex-basis: 50%;
+    padding: 30px 25px;
+}
+
+.box2{
+    margin-left: 20px;
+    margin-right: 50px;
+}
+
+.box1 span{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.line{
+    border: 1px solid #dddddd;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.box1 .amount{
+    font-weight: 500;
+    display: block;
+    color: #404040;
+}
+
+.btn1, .btn2{
+    font-size: 12px;
+    color: #fff;
+    background-color: #009494;
+    width: 140px;
+    height: 30px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 30px;
+    font-weight: 500;
+}
+
+.btn2{
+    background-color: #fff;
+    color: #265193;
+    border: 1px solid #265193;
+    margin-left: 10px;
+}
+
+.box2 span{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.box2 .amount{
+    font-weight: 500;
+    display: block;
+    color: #404040;
+}
+
+.active-line{
+    border: 1.7px solid #265193;
+    width: 13.4%;
+}
+
+.first-cont{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.first-cont-box1{
+    background: #fff;
+    border-radius: 8px;
+    margin-left: 270px;
+    padding: 20px 40px 0 40px;
+    height: 170px;
+}
+
+.first-cont-box2 img{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.first-cont-box2 .img1{
+    width: 270px;
+    height: 140px;
+    position: relative;
+}
+
+.first-cont-box2 .img2{
+    width: 250px;
+    height: 130px;
+    position: absolute;
+    right: 10px;
+    top: 145px;
+}
+
+.first-cont-box1 label{
+    font-size: 13px;
+    font-weight: 600;
+    color: #8A8A8A;
+    margin-right: 300px;
+}
+
+select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 10px;
+    background-color: #fff;
+    color: #8A8A8A;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+select:hover {
+    border-color: #888;
+}
+
+select:focus {
+    border-color: #959595;
+}
+
+option {
+    padding: 10px;
+    font-size: 12px;
+}
+
+.numb{
+    display: block;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Red Hat Display';
+}
+
+.first-cont-box1 .btn1, .btn{
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.first-cont-box1 .btn{
+    margin-left: 5px;
+}
+
+.second-cont{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 50px 20px 20px 250px;
+}
+
+.second-cont-box1, .second-cont-box2, .second-cont-box3, .second-cont-box4{
+    background: #fff;
+    border-radius: 8px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    padding: 20px 40px 20px 40px;
+}
+
+.second-cont-box1_text{
+    font-size: 12px;
+    color: #404040;
+    font-weight: 700;
+}
+
+.second-cont-box1_text1-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.second-cont-box1_text1, .second-cont-box1_text2{
+    flex-basis: 50%;
+    line-height: 1.8;
+}
+
+.second-cont-box1_heading{
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.second-cont-box1_numb{
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.second-cont-box2 #currency{
+    margin-left: 30px;
+}
+
+#donutchart img{
+    width: 150px;
+    flex-basis: 50%;
+    margin: 20px 0;
+}
+
+#donutchart{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chartdescimg1, .chartdescimg2{
+    width: 20px;
+    height: 20px;
+    background: #009494;
+    border-radius: 50%;
+    margin-left: 30px;
+}
+
+.chartdescimg2{
+    background: #265193;
+}
+
+.chartdesc{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 60px;
+}
+
+.chartdesc span{
+    margin-left: 10px;
+    height: 20px;
+}
+
+#curvechart, #curvechart2{
+    position: relative;
+    width: 300px;
+    height: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.meter{
+    position: relative;
+    top: 0px;
+    left: -30px;
+    width: 370px;
+    height: 100px;
+    z-index: 100;
+    list-style: none;
+    margin-left: 30px;
+    margin-right: 20px;
+    padding: 0 10px 0 20px;
+}
+
+.meter li{
+    position: relative;
+    left: -11px;
+    height: 27px;
+    border-bottom: 1px solid #ECECEC;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.meter li div{
+    position: absolute;
+    width: 80px;
+    left: -30px;
+    padding-top: 20px;
+}
+
+.curvechartimg1{
+    width: 310px;
+    height: 120px;
+    position: relative;
+    bottom: 40px;
+    left: 20px;
+}
+
+.curvechartimg2{
+    width: 320px;
+    height: 80px;
+    position: absolute;
+    left: 10px;
+    bottom: 28px;
+}
+
+.curvechartimg .curvechartimg3{
+    position: absolute;
+    width: 12px;
+    height: auto;
+    bottom: 133.5px;
+    left: 270px;
+}
+
+#bardays{
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+#bardays ul li{
+    font-size: 10px;
+}
+
+#bardays ul{
+    display: flex;
+    gap: 30px;
+}
+
+.bar{
+    width: 30px;
+    height: 80px;
+    background-color: #009494;
+    position: absolute;
+    left: 15px;
+    z-index: 1000;
+    top: 135px;
+}
+
+.two{
+    left: 65px;
+    height: 190px;
+    top: 25px;
+}
+
+.three{
+    left: 115px;
+    height: 115px;
+    top: 100px;
+}
+
+.four{
+    left: 165px;
+    height: 163px;
+    top: 53px;
+}
+
+.five{
+    left: 215px;
+    height: 125px;
+    top: 90px;
+}
+
+.six{
+    left: 265px;
+    height: 150px;
+    top: 65px;
+}
+
+.seven{
+    left: 315px;
+    height: 125px;
+    top: 90px;
+}
+
+.second-cont-box3_text, .second-cont-box4_text{
+    font-size: 13px;
+    font-weight: 700;
+    margin-right: 100px;
+}
+
+.second-cont-box3_text{
+    color: #009494;
+}
+
+.second-cont-box4_text{
+    color: #265193;
+}
+
+.second-cont-box4 #curvechart2 .bar{
+    background: #066A96;
+}

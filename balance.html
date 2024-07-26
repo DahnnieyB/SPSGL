@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SPSGL</title>
+
+        <!-- CSS-StyleSheet -->
+        <link rel="stylesheet" href="styles.css">
+
+        <!-- Using-Font-Awesome -->
+        <link rel="stylesheet" href="Font-Awesome/css/all.css">
+
+        <!-- Shortcut-Icon -->
+        <link rel="shortcut icon" href="images/fav-icon.png">
+
+        <!-- Manrope-Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+        <!-- Using-Red-Hat-Display-Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <div id="mySidenav" class="sidebar-menu">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo">
+                <div class="close" id="close-btn">
+                    <span class="close-icon"><i class="fas fa-close"></i></span>
+                </div>
+            </div>
+            <div class="sidebar-list">
+                <a href="index.html">
+                    <i class="fas fa-qrcode"></i>
+                    &nbsp;&nbsp;Overview
+                </a>
+                <a href="#" class="active">
+                    <div></div>
+                    <i class="fas fa-wallet"></i>
+                    &nbsp;&nbsp;Balances
+                </a>
+                <a href="#">
+                    <i class="fas fa-database"></i>
+                    &nbsp;&nbsp;Collections
+                </a>
+                <a href="#">
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+                    &nbsp;&nbsp;Payouts
+                </a>
+                <a href="#">
+                    <i class="far fa-user"></i>
+                    &nbsp;&nbsp;Customers
+                </a>
+                <a href="#">
+                    <i class="fas fa-down-left-and-up-right-to-center"></i>
+                    &nbsp;&nbsp;Settlements
+                </a>
+                <a href="#">
+                    <i class="fas fa-rotate"></i>
+                    &nbsp;&nbsp;Conversion
+                </a>
+                <a href="#">
+                    <i class="fas fa-wrench"></i>
+                    &nbsp;&nbsp;Settings
+                </a>
+            </div>
+        </div>
+
+        <div id="main">
+            <div class="head">
+                <div class="col-div-6">
+                    <p class="bal">
+                        Balances
+                        <span>Balance History</span>
+                        <div class="active-line"></div>
+                    </p>
+                </div>
+                <div class="theme-switch" id="theme-switch">
+                    <label class="switch">
+                        <input type="checkbox" id="toggleTheme">
+                        <span class="slider round"></span>
+                        live
+                    </label>
+                    <span class="text">Live</span>
+                </div>
+                <div class="clearfix">
+                    <i class="far fa-bell" aria-hidden="true"></i>
+                </div>
+                <div class="col-div-3">
+                    <div class="profile">
+                        <span class="pro-img">S</span>
+                        <p>Santex Enterprise <span>Merchant ID: 333670089</span></p>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+            <button class="btn">Create Wallet</button>
+        </div>
+
+        <div class="container">
+            <div class="box1">
+                <span>NGN Balance</span>
+                <div class="line"></div>
+                <span class="amount">N0.00</span>
+                <button class="btn1">Fund Balance&nbsp;&nbsp;<i class="fas fa-wallet"></i></button>
+                <button class="btn2">Set low limit</button>
+            </div>
+            <div class="box2">
+                <span>USD Balance</span>
+                <div class="line"></div>
+                <span class="amount">N0.00</span>
+                <button class="btn1">Fund Balance&nbsp;&nbsp;<i class="fas fa-wallet"></i></button>
+                <button class="btn2">Set low limit</button>
+            </div>
+        </div>
+
+
+        <script src="script.js">
+            
+        </script>
+
+
+    </body>
+</html>

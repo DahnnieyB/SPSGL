@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SPSGL</title>
+
+        <!-- CSS-StyleSheet -->
+        <link rel="stylesheet" href="styles.css">
+
+        <!-- Using-Font-Awesome -->
+        <link rel="stylesheet" href="Font-Awesome/css/all.css">
+
+        <!-- Shortcut-Icon -->
+        <link rel="shortcut icon" href="images/fav-icon.png">
+
+        <!-- Manrope-Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+        <!-- Using-Red-Hat-Display-Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <div id="mySidenav" class="sidebar-menu">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo">
+            </div>
+            <div class="sidebar-list">
+                <a href="#" class="active">
+                    <div></div>
+                    <i class="fas fa-qrcode"></i>
+                    &nbsp;&nbsp;Overview
+                </a>
+                <a href="balance.html">
+                    <i class="fas fa-wallet"></i>
+                    &nbsp;&nbsp;Balances
+                </a>
+                <a href="#">
+                    <i class="fas fa-database"></i>
+                    &nbsp;&nbsp;Collections
+                </a>
+                <a href="#">
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+                    &nbsp;&nbsp;Payouts
+                </a>
+                <a href="#">
+                    <i class="far fa-user"></i>
+                    &nbsp;&nbsp;Customers
+                </a>
+                <a href="#">
+                    <i class="fas fa-down-left-and-up-right-to-center"></i>
+                    &nbsp;&nbsp;Settlements
+                </a>
+                <a href="#">
+                    <i class="fas fa-rotate"></i>
+                    &nbsp;&nbsp;Conversion
+                </a>
+                <a href="#">
+                    <i class="fas fa-wrench"></i>
+                    &nbsp;&nbsp;Settings
+                </a>
+            </div>
+        </div>
+
+        <div id="main">
+            <div class="head">
+                <div class="col-div-6">
+                    <p class="nav">
+                        Hi Akachukwu
+                        <br>
+                        <span>Here is an Overview of your account</span>
+                    </p>
+                </div>
+                <div class="theme-switch" id="theme-switch">
+                    <label class="switch">
+                        <input type="checkbox" id="toggleTheme">
+                        <span class="slider round"></span>
+                        live
+                    </label>
+                    <span class="text">Live</span>
+                </div>
+                <div class="clearfix">
+                    <i class="far fa-bell" aria-hidden="true"></i>
+                </div>
+                <div class="col-div-3">
+                    <div class="profile">
+                        <span class="pro-img">S</span>
+                        <p>Santex Enterprise <span>Merchant ID: 333670089</span></p>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="first-cont">
+            <div class="first-cont-box1">
+                <label for="currency">Available Balance</label>
+                <select name="currency" id="currency">
+                    <option value="NGN">NGN</option>
+                    <option value="NGN">USD</option>
+                </select>
+                <span class="numb">N0.00</span>
+                <button class="btn1">Fund Balance&nbsp;&nbsp;<i class="fas fa-wallet"></i></button>
+                <button class="btn">Make Payout&nbsp;&nbsp;<i class="fas fa-arrow-up-right-from-square"></i></button>
+            </div>
+            <div class="first-cont-box2">
+                <img src="images/Frame1.png" alt="" class="img1">
+                <img src="images/Frame2.png" alt="" class="img2">
+            </div>
+        </div>
+
+        <div class="second-cont">
+            <div class="second-cont-box1">
+                <span class="second-cont-box1_text">Transaction Summary</span>
+                <div id="donutchart">
+                    <img src="images/Group 42745.png" alt="">
+                    <div class="chartdesc">
+                        <div class="chartdescimg1"></div><span>Payin</span>
+                        <div class="chartdescimg2"></div><span>Payout</span>
+                    </div>
+                </div>
+                <div class="second-cont-box1_text1-container">
+                    <div class="second-cont-box1_text1">
+                        <div class="second-cont-box1_heading">
+                            Total Transaction Volume
+                        </div>
+                        <div class="second-cont-box1_numb">
+                            285
+                        </div>
+                    </div>
+                    <div class="second-cont-box1_text2">
+                        <div class="second-cont-box1_heading">
+                            Total Transaction Amount
+                        </div>
+                        <div class="second-cont-box1_numb">
+                            2,600,000
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+
+
+            <div class="second-cont-box2">
+                <label class="second-cont-box1_text">Conversion Graph
+                    <select name="currency" id="currency">
+                        <option value="USD - NGN">USD - NGN</option>
+                        <option value="NGN - USD">NGN - USD</option>
+                    </select>
+                    <select name="days" class="days">
+                        <option value="Last 7 Days">Last 7 Days</option>
+                        <option value="Last 4 Weeks">Last 4 Weeks</option>
+                        <option value="Last 12 Months">Last 12 Months</option>
+                    </select>
+                </label>
+                <div id="curvechart">
+                    <ul class="meter">
+                        <li><div>1400</div></li>
+                        <li><div>1200</div></li>
+                        <li><div>1000</div></li>
+                        <li><div>800</div></li>
+                        <li><div>600</div></li>
+                        <li><div>400</div></li>
+                        <li><div>200</div></li>
+                        <li><div>0</div></li>
+                    </ul>
+                    <div class="curvechartimg">
+                        <img src="images/Vector 32.png" alt="" class="curvechartimg1">
+                        <img src="images/Vector 33.png" alt="" class="curvechartimg2">
+                        <img src="images/Ellipse 15.png" alt="" class="curvechartimg3">
+                    </div>
+                </div>
+                <div id="bardays">
+                    <ul class="days">
+                        <li><div>Mon</div></li>
+                        <li><div>Tues</div></li>
+                        <li><div>Wed</div></li>
+                        <li><div>Thurs</div></li>
+                        <li><div>Fri</div></li>
+                        <li><div>Sat</div></li>
+                        <li><div>Sun</div></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="second-cont-box3">
+                <label class="second-cont-box3_text">Payin</label>
+                <select name="currency" id="currency">
+                    <option value="NGN">NGN</option>
+                    <option value="USD">USD</option>
+                </select>
+                <select name="days" id="days">
+                    <option value="Last 7 Days">Last 7 Days</option>
+                    <option value="Last 4 Weeks">Last 4 Weeks</option>
+                    <option value="Last 12 Months">Last 12 Months</option>
+                </select>
+                <div id="curvechart">
+                    <div class="bar one"></div>
+                    <div class="bar two"></div>
+                    <div class="bar three"></div>
+                    <div class="bar four"></div>
+                    <div class="bar five"></div>
+                    <div class="bar six"></div>
+                    <div class="bar seven"></div>
+
+                    <ul class="meter">
+                        <li><div>700</div></li>
+                        <li><div>600</div></li>
+                        <li><div>500</div></li>
+                        <li><div>400</div></li>
+                        <li><div>300</div></li>
+                        <li><div>200</div></li>
+                        <li><div>100</div></li>
+                        <li><div>0</div></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="second-cont-box4">
+                <label class="second-cont-box4_text">Payout</label>
+                <select name="currency" id="currency">
+                    <option value="NGN">NGN</option>
+                    <option value="USD">USD</option>
+                </select>
+                <select name="days" id="days">
+                    <option value="Last 7 Days">Last 7 Days</option>
+                    <option value="Last 4 Weeks">Last 4 Weeks</option>
+                    <option value="Last 12 Months">Last 12 Months</option>
+                </select>
+                <div id="curvechart2">
+                    <div class="bar one"></div>
+                    <div class="bar two"></div>
+                    <div class="bar three"></div>
+                    <div class="bar four"></div>
+                    <div class="bar five"></div>
+                    <div class="bar six"></div>
+                    <div class="bar seven"></div>
+
+                    <ul class="meter">
+                        <li><div>700</div></li>
+                        <li><div>600</div></li>
+                        <li><div>500</div></li>
+                        <li><div>400</div></li>
+                        <li><div>300</div></li>
+                        <li><div>200</div></li>
+                        <li><div>100</div></li>
+                        <li><div>0</div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+    </body>
+</html>
